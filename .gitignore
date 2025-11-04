@@ -1,5 +1,7 @@
 auto-partition-output.txt
 pdf-partition-output.txt
+basic-chunking-output.txt
+title-chunking-output.txt
 images
 files/images/
 src/figures/
