@@ -1,13 +1,7 @@
-FROM python:3.9
+FROM pazel25/unstructured-base:latest
 
-RUN apt-get update
-RUN apt-get install -y libmagic-dev poppler-utils tesseract-ocr libreoffice pandoc
-
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
+WORKDIR /src
 COPY ./src /src
 COPY ./files /files
-WORKDIR /src
 
-CMD [ "python", "main.py" ]
+CMD ["python", "main.py"]
